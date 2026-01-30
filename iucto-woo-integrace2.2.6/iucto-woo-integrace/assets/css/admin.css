@@ -1,0 +1,437 @@
+/**
+ * iÚčto Woo Integrace - Admin Styly s taby
+ * 
+ * @package IUcto_Woo_Integration
+ * @since 2.0.0
+ */
+
+/* ==========================================================================
+   Hlavní wrapper
+   ========================================================================== */
+
+.iucto-settings-wrap {
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+.iucto-settings-wrap h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.iucto-settings-wrap > .description {
+    color: #646970;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Tab navigace
+   ========================================================================== */
+
+.iucto-nav-tabs {
+    margin: 30px 0 0 0;
+    border-bottom: 1px solid #c3c4c7;
+    background: #fff;
+    padding: 0;
+}
+
+.iucto-nav-tabs .nav-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: #50575e;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.iucto-nav-tabs .nav-tab:hover {
+    background: #f6f7f7;
+    color: #2271b1;
+}
+
+.iucto-nav-tabs .nav-tab-active,
+.iucto-nav-tabs .nav-tab-active:hover {
+    border-bottom-color: #2271b1;
+    color: #2271b1;
+    background: #f6f7f7;
+}
+
+.iucto-nav-tabs .nav-tab .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* ==========================================================================
+   Tab content
+   ========================================================================== */
+
+.iucto-tab-content {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Card komponenty
+   ========================================================================== */
+
+.iucto-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.iucto-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.iucto-card > .description {
+    color: #646970;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.iucto-card-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #dcdcde;
+}
+
+.iucto-card-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Form table úpravy
+   ========================================================================== */
+
+.iucto-settings-form .form-table {
+    margin-top: 0;
+}
+
+.iucto-settings-form .form-table th {
+    width: 250px;
+    padding: 20px 10px 20px 0;
+    font-weight: 500;
+}
+
+.iucto-settings-form .form-table td {
+    padding: 20px 10px;
+}
+
+.iucto-settings-form .form-table input[type="text"],
+.iucto-settings-form .form-table input[type="number"],
+.iucto-settings-form .form-table textarea {
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Toggle switch (pro checkboxy)
+   ========================================================================== */
+
+.iucto-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.iucto-toggle input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.iucto-toggle-slider {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    background-color: #dcdcde;
+    border-radius: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.iucto-toggle-slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.iucto-toggle input:checked + .iucto-toggle-slider {
+    background-color: #2271b1;
+}
+
+.iucto-toggle input:checked + .iucto-toggle-slider:before {
+    transform: translateX(20px);
+}
+
+.iucto-toggle-label {
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Info/Warning/Placeholder boxy
+   ========================================================================== */
+
+.iucto-info-box,
+.iucto-warning-box {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.iucto-info-box {
+    background: #d1ecf1;
+    border-left: 4px solid #0c5460;
+}
+
+.iucto-warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.iucto-info-box .dashicons,
+.iucto-warning-box .dashicons {
+    flex-shrink: 0;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+}
+
+.iucto-info-box p,
+.iucto-warning-box p {
+    margin: 5px 0 0 0;
+}
+
+.iucto-placeholder-box {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f6f7f7;
+    border: 2px dashed #c3c4c7;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.iucto-placeholder-box .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #c3c4c7;
+}
+
+/* ==========================================================================
+   Test section
+   ========================================================================== */
+
+.iucto-test-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f6f7f7;
+    border-radius: 4px;
+}
+
+.iucto-test-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.iucto-test-section .button-large {
+    font-size: 14px;
+    height: auto;
+    padding: 8px 20px;
+}
+
+/* ==========================================================================
+   Help section
+   ========================================================================== */
+
+.iucto-help-section {
+    margin-bottom: 30px;
+}
+
+.iucto-help-section h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.iucto-help-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.iucto-help-list li {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.iucto-help-list li:last-child {
+    border-bottom: none;
+}
+
+.iucto-help-list .dashicons {
+    flex-shrink: 0;
+    color: #2271b1;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.iucto-version-box {
+    margin-top: 30px;
+    padding: 15px;
+    background: #f6f7f7;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #646970;
+}
+
+/* ==========================================================================
+   Sticky footer s tlačítky
+   ========================================================================== */
+
+.iucto-sticky-footer {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 20px 30px;
+    border-top: 1px solid #c3c4c7;
+    margin: 0 -30px -30px -30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+.iucto-save-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #646970;
+    font-size: 13px;
+}
+
+.iucto-save-info .dashicons {
+    color: #2271b1;
+}
+
+/* ==========================================================================
+   Loading states
+   ========================================================================== */
+
+.iucto-loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #2271b1;
+    border-radius: 50%;
+    animation: iucto-spin 1s linear infinite;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@keyframes iucto-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   Sloupec v seznamu objednávek
+   ========================================================================== */
+
+.column-iucto_invoice {
+    width: 120px;
+}
+
+.column-iucto_invoice span {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+    .iucto-settings-wrap {
+        margin: 10px 0;
+    }
+    
+    .iucto-nav-tabs .nav-tab {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+    
+    .iucto-nav-tabs .nav-tab .dashicons {
+        display: none;
+    }
+    
+    .iucto-card {
+        padding: 20px;
+    }
+    
+    .iucto-settings-form .form-table th {
+        width: auto;
+    }
+    
+    .iucto-sticky-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .iucto-nav-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
